@@ -3,7 +3,7 @@ import { RestDBAxios } from '../index.js';
 /*
  * Account, Contacts, Opportunities will all follow the same structure
  * With there being 3 functions that will be run
- * Request --> Fetch --> Recieved
+ * Request --> Fetch --> Received
  * This follows a convention stated under Async Actions in Redux:
  *
  * https://redux.js.org/advanced/async-actions
