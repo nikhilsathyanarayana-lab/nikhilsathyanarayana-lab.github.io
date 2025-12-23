@@ -13,6 +13,41 @@ body {
     'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
 }
 
+// Improve visible focus outlines for keyboard users
+:focus-visible {
+  outline: 3px solid $secondary-color !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba($primary-color, 0.35);
+  transition: outline 0.05s ease-out, outline-offset 0.05s ease-out,
+    box-shadow 0.05s ease-out;
+}
+
+.ant-btn:focus-visible,
+.ant-input:focus-visible,
+.ant-input-affix-wrapper-focused,
+.ant-select-focused .ant-select-selection,
+.ant-picker-focused,
+.ant-tabs-nav .ant-tabs-tab:focus-visible,
+.ant-pagination-item:focus-visible,
+.ant-pagination-prev:focus-visible,
+.ant-pagination-next:focus-visible,
+.ant-menu-item:focus-visible,
+.ant-dropdown-menu-item:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+input[type='text']:focus-visible,
+input[type='search']:focus-visible,
+input[type='email']:focus-visible,
+input[type='password']:focus-visible,
+input[type='tel']:focus-visible,
+input[type='url']:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid $secondary-color !important;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba($primary-color, 0.35);
+}
+
 // Hide scroll bar
 ::-webkit-scrollbar {
   background: transparent;
