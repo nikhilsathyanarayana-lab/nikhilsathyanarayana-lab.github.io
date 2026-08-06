@@ -41,7 +41,7 @@
 
       y = e.createElement(n);
       y.async = true;
-      y.src = 'https://cdn.pendo.io/agent/static/' + apiKey + '/pendo.js';
+      y.src = 'https://cdn.eu.pendo.io/agent/static/' + apiKey + '/pendo.js';
       z = e.getElementsByTagName(n)[0];
       z.parentNode.insertBefore(y, z);
     })(window, document, 'script', 'pendo');
@@ -55,5 +55,5 @@
         id: accountId || 'ACCOUNT-UNIQUE-ID',
       },
     });
-  })('YOUR-PENDO-API-KEY-HERE');
+  })('224383d7-9416-4e20-8fa6-a7a6f27e58f8');
 })();
