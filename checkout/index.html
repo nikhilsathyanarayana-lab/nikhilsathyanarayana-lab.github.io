@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#102535" />
+    <title>Checkout | pizzashop</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./checkout.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../" aria-label="Pizza CRM home">
+        <img src="../images/pizza-logo.png" alt="" />
+        <span><strong>pizza</strong>shop</span>
+      </a>
+      <span class="secure-label"><span aria-hidden="true">●</span> Secure checkout</span>
+    </header>
+
+    <main class="checkout-layout">
+      <section class="checkout-flow" aria-labelledby="checkout-title">
+        <a class="back-link" href="../">← Back to shop</a>
+        <h1 id="checkout-title">Checkout</h1>
+
+        <section class="checkout-step is-open" data-step="1">
+          <header class="step-header">
+            <span class="step-number">1</span>
+            <h2>Customer</h2>
+          </header>
+          <div class="step-content">
+            <label class="field">
+              <span>Email address *</span>
+              <input type="email" name="email" autocomplete="email" />
+            </label>
+            <button class="continue-button" type="button">Continue</button>
+          </div>
+        </section>
+
+        <section class="checkout-step" data-step="2">
+          <header class="step-header">
+            <span class="step-number">2</span>
+            <h2>Organisation</h2>
+          </header>
+        </section>
+
+        <section class="checkout-step" data-step="3">
+          <header class="step-header">
+            <span class="step-number">3</span>
+            <h2>Payment</h2>
+          </header>
+        </section>
+      </section>
+
+      <aside class="order-summary" aria-labelledby="order-title">
+        <h2 id="order-title">Your order</h2>
+        <div class="order-item">
+          <span class="product-image" aria-hidden="true">🍕</span>
+          <span class="product-copy">
+            <strong>The Team Favourite</strong>
+            <small>Large · Classic crust</small>
+            <small>Quantity: 1</small>
+          </span>
+          <strong>£18.00</strong>
+        </div>
+        <dl class="totals">
+          <div><dt>Subtotal</dt><dd>£18.00</dd></div>
+          <div><dt>Delivery</dt><dd>£2.50</dd></div>
+          <div class="total"><dt>Total</dt><dd>£20.50</dd></div>
+        </dl>
+        <p class="secure-note">Secure checkout</p>
+      </aside>
+    </main>
+  </body>
+</html>
