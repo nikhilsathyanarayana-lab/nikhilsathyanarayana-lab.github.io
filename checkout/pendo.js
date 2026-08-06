@@ -48,11 +48,11 @@
 
     window.pendo.initialize({
       visitor: {
-        id: visitorId || 'VISITOR-UNIQUE-ID',
-        role: role || 'user',
+        id: visitorId,
+        role: role,
       },
       account: {
-        id: accountId || 'ACCOUNT-UNIQUE-ID',
+        id: accountId,
       },
     });
   })('224383d7-9416-4e20-8fa6-a7a6f27e58f8');

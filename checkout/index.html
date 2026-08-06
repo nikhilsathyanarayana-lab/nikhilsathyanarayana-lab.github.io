@@ -24,7 +24,7 @@
     </header>
 
     <main class="checkout-layout">
-      <form class="checkout-flow" id="checkout-form" aria-labelledby="checkout-title" novalidate>
+      <form id="checkout-form" aria-labelledby="checkout-title" novalidate>
         <a class="back-link" href="../">← Back to demoCRM</a>
         <h1 id="checkout-title">Checkout</h1>
 
@@ -32,14 +32,14 @@
           <header class="step-header">
             <span class="step-number">1</span>
             <h2>Customer</h2>
-            <span class="step-summary" data-summary="1"></span>
+            <span class="step-summary"></span>
             <button class="edit-button" type="button" data-edit="1" hidden>Edit</button>
           </header>
           <div class="step-content">
             <label class="field">
               <span>Email address *</span>
               <input type="email" name="email" autocomplete="email" required />
-              <small class="field-error" data-error="email"></small>
+              <small class="field-error"></small>
             </label>
             <button class="continue-button" type="button" data-continue="1">Continue</button>
           </div>
@@ -49,7 +49,7 @@
           <header class="step-header">
             <span class="step-number">2</span>
             <h2>Organisation</h2>
-            <span class="step-summary" data-summary="2"></span>
+            <span class="step-summary"></span>
             <button class="edit-button" type="button" data-edit="2" hidden>Edit</button>
           </header>
           <div class="step-content">
@@ -57,41 +57,41 @@
               <label class="field">
                 <span>Organisation *</span>
                 <input type="text" name="organisation" autocomplete="organization" placeholder="Pendo" required />
-                <small class="field-error" data-error="organisation"></small>
+                <small class="field-error"></small>
               </label>
             </div>
 
             <h3>Billing Address</h3>
-            <div class="fields organisation-fields">
+            <div class="fields">
               <label class="field">
                 <span>First Name *</span>
                 <input type="text" name="firstName" autocomplete="given-name" required />
-                <small class="field-error" data-error="firstName"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Last Name *</span>
                 <input type="text" name="lastName" autocomplete="family-name" required />
-                <small class="field-error" data-error="lastName"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Phone Number *</span>
                 <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required />
-                <small class="field-error" data-error="phone"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Address line 1 *</span>
                 <input type="text" name="address1" autocomplete="address-line1" required />
-                <small class="field-error" data-error="address1"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Address line 2</span>
                 <input type="text" name="address2" autocomplete="address-line2" />
-                <small class="field-error" data-error="address2"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>City *</span>
                 <input type="text" name="city" autocomplete="address-level2" required />
-                <small class="field-error" data-error="city"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Country *</span>
@@ -102,12 +102,12 @@
                   <option value="Canada">Canada</option>
                   <option value="Australia">Australia</option>
                 </select>
-                <small class="field-error" data-error="country"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Postcode *</span>
                 <input type="text" name="postcode" autocomplete="postal-code" required />
-                <small class="field-error" data-error="postcode"></small>
+                <small class="field-error"></small>
               </label>
             </div>
             <button class="continue-button" type="button" data-continue="2">Continue</button>
@@ -125,22 +125,22 @@
               <label class="field full-width">
                 <span>Name on card *</span>
                 <input type="text" name="cardName" autocomplete="cc-name" required />
-                <small class="field-error" data-error="cardName"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field full-width">
                 <span>Card number *</span>
                 <input type="text" name="cardNumber" autocomplete="cc-number" inputmode="numeric" placeholder="0000 0000 0000 0000" maxlength="19" required />
-                <small class="field-error" data-error="cardNumber"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Expiry date *</span>
                 <input type="text" name="expiry" autocomplete="cc-exp" inputmode="numeric" placeholder="MM/YY" maxlength="5" required />
-                <small class="field-error" data-error="expiry"></small>
+                <small class="field-error"></small>
               </label>
               <label class="field">
                 <span>Security code *</span>
                 <input type="text" name="cvc" autocomplete="cc-csc" inputmode="numeric" placeholder="CVC" maxlength="4" required />
-                <small class="field-error" data-error="cvc"></small>
+                <small class="field-error"></small>
               </label>
             </div>
             <button class="continue-button pay-button" type="submit">Pay £20.50</button>

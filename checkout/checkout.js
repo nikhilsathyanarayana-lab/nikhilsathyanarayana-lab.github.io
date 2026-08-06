@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  document.documentElement.classList.add('js');
-
   var form = document.getElementById('checkout-form');
   var layout = document.querySelector('.checkout-layout');
   var confirmation = document.getElementById('confirmation');
