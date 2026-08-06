@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="robots" content="noindex" />
     <meta name="theme-color" content="#102535" />
-    <title>Checkout | pizzashop</title>
-    <link rel="shortcut icon" href="../favicon.ico" />
+    <title>Checkout | demoCRM</title>
+    <link rel="icon" type="image/png" href="../images/democrm-logo.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet" />
@@ -15,16 +15,15 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../" aria-label="Pizza CRM home">
-        <img src="../images/pizza-logo.png" alt="" />
-        <span><strong>pizza</strong>shop</span>
+      <a class="brand" href="../" aria-label="demoCRM home">
+        <img src="../images/democrm-logo.png" alt="demoCRM" />
       </a>
       <span class="secure-label"><span aria-hidden="true">●</span> Secure checkout</span>
     </header>
 
     <main class="checkout-layout">
       <form class="checkout-flow" id="checkout-form" aria-labelledby="checkout-title" novalidate>
-        <a class="back-link" href="../">← Back to shop</a>
+        <a class="back-link" href="../">← Back to demoCRM</a>
         <h1 id="checkout-title">Checkout</h1>
 
         <section class="checkout-step is-open" data-step="1">
@@ -148,19 +147,19 @@
       </form>
 
       <aside class="order-summary" aria-labelledby="order-title">
-        <h2 id="order-title">Your order</h2>
+        <h2 id="order-title">Your plan</h2>
         <div class="order-item">
-          <span class="product-image" aria-hidden="true">🍕</span>
+          <span class="product-image" aria-hidden="true"></span>
           <span class="product-copy">
-            <strong>The Team Favourite</strong>
-            <small>Large · Classic crust</small>
+            <strong>demoCRM Team</strong>
+            <small>10 users · Monthly</small>
             <small>Quantity: 1</small>
           </span>
           <strong>£18.00</strong>
         </div>
         <dl class="totals">
           <div><dt>Subtotal</dt><dd>£18.00</dd></div>
-          <div><dt>Delivery</dt><dd>£2.50</dd></div>
+          <div><dt>Setup</dt><dd>£2.50</dd></div>
           <div class="total"><dt>Total</dt><dd>£20.50</dd></div>
         </dl>
         <p class="secure-note">Secure checkout</p>
@@ -169,11 +168,11 @@
 
     <main class="confirmation" id="confirmation" hidden>
       <span class="confirmation-icon" aria-hidden="true">✓</span>
-      <span class="eyebrow">Order #PZ-2048</span>
+      <span class="eyebrow">Order #DM-2048</span>
       <h1>Thanks, <span data-confirmation-name></span>!</h1>
-      <p>Your pizza is in the oven. We sent a confirmation to <strong data-confirmation-email></strong>.</p>
+      <p>Your demoCRM subscription is active. We sent a confirmation to <strong data-confirmation-email></strong>.</p>
       <dl class="confirmation-details">
-        <div><dt>Estimated delivery</dt><dd>35–45 minutes</dd></div>
+        <div><dt>Plan access</dt><dd>Available now</dd></div>
         <div><dt>Billing address</dt><dd data-confirmation-address></dd></div>
       </dl>
       <a class="home-button" href="../">Return to home</a>

@@ -37,10 +37,10 @@ body {
 }
 
 .brand img {
-  width: 58px;
-  height: 58px;
-  margin-right: 10px;
-  object-fit: contain;
+  width: 190px;
+  height: 62px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .secure-label { color: var(--muted); font-size: 14px; }
@@ -182,7 +182,7 @@ h1 { margin: 15px 0 28px; font-size: 38px; }
 
 .order-summary { position: sticky; top: 28px; margin: 0; }
 .order-item { padding: 22px 0; border-bottom: 1px solid #e8e8e8; display: grid; grid-template-columns: 60px 1fr auto; gap: 13px; }
-.product-image { height: 60px; border-radius: 18px; background: #fff0dc; display: grid; place-items: center; font-size: 32px; }
+.product-image { height: 60px; border-radius: 18px; background: var(--navy) url('../images/democrm-logo.png') 18% center / 300% auto no-repeat; }
 .product-copy { display: flex; flex-direction: column; gap: 3px; }
 .product-copy small { color: var(--muted); }
 .totals { margin: 0; padding-top: 19px; }
@@ -261,7 +261,7 @@ h1 { margin: 15px 0 28px; font-size: 38px; }
 
 @media (max-width: 580px) {
   .site-header { height: 72px; padding: 0 18px; }
-  .brand img { width: 52px; height: 52px; }
+  .brand img { width: 160px; height: 56px; }
   .secure-label { font-size: 0; }
   .secure-label span { margin: 0; font-size: 16px; }
   .checkout-layout { width: calc(100% - 16px); }
