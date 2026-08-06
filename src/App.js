@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import FinalNavigation from './containers/navigation/navigationContainer.js';
 import FinalBody from './containers/body/bodyContainer.js';
+import Checkout from './components/checkout/checkout.js';
 
 class App extends Component {
 
@@ -27,8 +29,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <FinalNavigation />
-        <FinalBody visInfo="" />
+        <Switch>
+          <Route exact path="/checkout" component={Checkout} />
+          <Route
+            render={() => (
+              <React.Fragment>
+                <FinalNavigation />
+                <FinalBody visInfo="" />
+              </React.Fragment>
+            )}
+          />
+        </Switch>
       </div>
     );
   }
