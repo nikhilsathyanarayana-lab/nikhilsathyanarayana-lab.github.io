@@ -11,19 +11,14 @@ const MenuItemGroup = Menu.ItemGroup;
 // Navigation bar
 // Only of note is onNavClick is to update the page title as people click on it. That's all
 
-// TODO: #cloud-logo -> #acme-crm-logo, update guide
-
 const Navigation = ({ onNavClick }) => (
   <div className="nav-bar">
     <div className="logo">
       <img
-        src={`${window.location.origin}/images/pizza-logo.png`}
-        alt="logo"
-        id="pizza-logo"
+        src={`${window.location.origin}/images/democrm-logo.png`}
+        alt="demoCRM"
+        id="democrm-logo"
       />
-      <span className="logo-text">
-        <strong>pizza</strong>CRM
-      </span>
     </div>
     <Menu
       theme="light"
