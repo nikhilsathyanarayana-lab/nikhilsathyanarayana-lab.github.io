@@ -1,0 +1,225 @@
+.linkedin-sync-trigger {
+  margin-right: 10px;
+  border-color: #0a66c2;
+  color: #0a66c2;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.linkedin-sync-trigger:hover,
+.linkedin-sync-trigger:focus {
+  border-color: #004182;
+  color: #004182;
+}
+
+.linkedin-sync-button-icon,
+.linkedin-brand-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0a66c2;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.linkedin-sync-button-icon {
+  width: 17px;
+  height: 17px;
+  margin-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  vertical-align: -1px;
+}
+
+.linkedin-sync-modal-root[hidden] {
+  display: none;
+}
+
+.linkedin-sync-modal-root .ant-modal-wrap,
+.linkedin-sync-modal-root .ant-modal-mask {
+  z-index: 1100;
+}
+
+.linkedin-sync-modal-root .ant-modal {
+  width: 520px;
+}
+
+.linkedin-sync-modal-root .ant-modal-body {
+  padding: 24px;
+}
+
+.linkedin-sync-modal-root .ant-modal-close {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.linkedin-sync-modal-root .ant-modal-close-x {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.linkedin-connection-card {
+  display: flex;
+  align-items: center;
+  padding: 18px;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  background: #fafafa;
+}
+
+.linkedin-brand-icon {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  margin-right: 14px;
+  border-radius: 5px;
+  font-size: 28px;
+}
+
+.linkedin-connection-copy {
+  min-width: 0;
+}
+
+.linkedin-connection-heading {
+  display: flex;
+  align-items: center;
+  margin: 0 0 3px;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.linkedin-connected-dot {
+  width: 9px;
+  height: 9px;
+  margin-right: 7px;
+  border-radius: 50%;
+  background: #52c41a;
+  box-shadow: 0 0 0 3px rgba(82, 196, 26, 0.14);
+}
+
+.linkedin-connection-copy p,
+.linkedin-sync-description,
+.linkedin-sync-status {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+.linkedin-sync-description {
+  margin: 18px 0 14px;
+  line-height: 1.55;
+}
+
+.linkedin-modal-action {
+  width: 100%;
+  height: 40px;
+  font-weight: 700;
+}
+
+.linkedin-register-button {
+  border-color: #0a66c2;
+  color: #0a66c2;
+}
+
+.linkedin-register-button:hover,
+.linkedin-register-button:focus {
+  border-color: #004182;
+  color: #004182;
+}
+
+.linkedin-register-button[disabled] {
+  border-color: #b7eb8f;
+  background: #f6ffed;
+  color: #389e0d;
+}
+
+.linkedin-sync-separator {
+  height: 1px;
+  margin: 22px 0;
+  background: #e8e8e8;
+}
+
+.linkedin-sync-submit {
+  background: #0a66c2;
+  border-color: #0a66c2;
+}
+
+.linkedin-sync-submit:hover,
+.linkedin-sync-submit:focus {
+  background: #004182;
+  border-color: #004182;
+}
+
+.linkedin-sync-submit[disabled] {
+  color: #fff;
+  background: #6c9ac9;
+  border-color: #6c9ac9;
+}
+
+.linkedin-sync-progress {
+  height: 4px;
+  margin-top: 14px;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #e8e8e8;
+  opacity: 0;
+}
+
+.linkedin-sync-progress::after {
+  display: block;
+  width: 42%;
+  height: 100%;
+  border-radius: inherit;
+  background: #0a66c2;
+  content: "";
+  transform: translateX(-110%);
+}
+
+.linkedin-sync-progress.is-active {
+  opacity: 1;
+}
+
+.linkedin-sync-progress.is-active::after {
+  animation: linkedin-sync-progress 0.8s ease-in-out infinite;
+}
+
+.linkedin-sync-status {
+  min-height: 21px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.linkedin-sync-success {
+  display: flex;
+  align-items: center;
+  margin: 0 15px 14px;
+  padding: 10px 14px;
+  border: 1px solid #b7eb8f;
+  border-radius: 4px;
+  background: #f6ffed;
+  color: #237804;
+}
+
+.linkedin-sync-success-icon {
+  margin-right: 8px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+@keyframes linkedin-sync-progress {
+  from { transform: translateX(-110%); }
+  to { transform: translateX(260%); }
+}
+
+@media (max-width: 760px) {
+  .linkedin-sync-trigger {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .linkedin-sync-modal-root .ant-modal {
+    width: calc(100vw - 24px);
+  }
+}
