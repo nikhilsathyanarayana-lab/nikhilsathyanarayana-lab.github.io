@@ -34,6 +34,7 @@
   }
 
   function createModal() {
+    var refreshOnClose = false;
     var root = createElement("div", "linkedin-sync-modal-root");
     root.id = modalRootId;
     root.hidden = true;
@@ -115,6 +116,10 @@
 
     function closeModal() {
       if (syncInProgress) return;
+      if (refreshOnClose) {
+        window.location.reload();
+        return;
+      }
       root.hidden = true;
       document.body.classList.remove("ant-scrolling-effect");
       var trigger = document.getElementById(triggerId);
@@ -152,15 +157,17 @@
 
       window.setTimeout(function finishSync() {
         setSyncComplete();
+        syncInProgress = false;
+        refreshOnClose = true;
+        close.disabled = false;
         progress.classList.remove("is-active");
         syncButton.textContent = "✓ 20 CONTACTS SYNCED";
-        status.textContent = "Sync complete. Adding the contacts to your list…";
-
-        window.setTimeout(function refreshContactList() {
-          window.location.reload();
-        }, 650);
+        status.textContent =
+          "Sync complete. Close this window to view the 20 new contacts.";
       }, 1400);
     });
+
+    root.__closeLinkedInSync = closeModal;
 
     root.__openLinkedInSync = function openLinkedInSync() {
       root.hidden = false;
@@ -197,48 +204,23 @@
     addNew.parentNode.insertBefore(button, addNew);
   }
 
-  function addSuccessBanner() {
-    if (!isContactsPage() || !syncIsComplete()) return;
-    if (document.querySelector(".linkedin-sync-success")) return;
-    var table = document.querySelector(".main-content .whole-page-table");
-    if (!table || !table.parentNode) return;
-
-    var banner = createElement("div", "linkedin-sync-success");
-    banner.setAttribute("role", "status");
-    var icon = createElement("span", "linkedin-sync-success-icon", "✓");
-    icon.setAttribute("aria-hidden", "true");
-    banner.appendChild(icon);
-    banner.appendChild(
-      document.createTextNode(
-        "20 contacts synced from LinkedIn · New LinkedIn contacts appear first in the list"
-      )
-    );
-    table.parentNode.insertBefore(banner, table);
-  }
-
   function removeContactsOnlyUI() {
     if (isContactsPage()) return;
     var trigger = document.getElementById(triggerId);
-    var banner = document.querySelector(".linkedin-sync-success");
     var modal = document.getElementById(modalRootId);
     if (trigger) trigger.remove();
-    if (banner) banner.remove();
     if (modal) modal.remove();
   }
 
   function reconcile() {
     removeContactsOnlyUI();
     addTrigger();
-    addSuccessBanner();
   }
 
   document.addEventListener("keydown", function closeModalWithEscape(event) {
     if (event.key !== "Escape" || syncInProgress) return;
     var root = document.getElementById(modalRootId);
-    if (root && !root.hidden) {
-      root.hidden = true;
-      document.body.classList.remove("ant-scrolling-effect");
-    }
+    if (root && !root.hidden) root.__closeLinkedInSync();
   });
 
   var observer = new MutationObserver(reconcile);

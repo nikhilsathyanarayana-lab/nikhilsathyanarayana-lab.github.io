@@ -191,23 +191,6 @@
   text-align: center;
 }
 
-.linkedin-sync-success {
-  display: flex;
-  align-items: center;
-  margin: 0 15px 14px;
-  padding: 10px 14px;
-  border: 1px solid #b7eb8f;
-  border-radius: 4px;
-  background: #f6ffed;
-  color: #237804;
-}
-
-.linkedin-sync-success-icon {
-  margin-right: 8px;
-  font-size: 17px;
-  font-weight: 700;
-}
-
 @keyframes linkedin-sync-progress {
   from { transform: translateX(-110%); }
   to { transform: translateX(260%); }
