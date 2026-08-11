@@ -3,9 +3,17 @@
 
   var params = new URLSearchParams(window.location.search);
   var disablePendo = params.get('disablePendo') === 'true';
-  var accountId = params.get('account') || 'Demo Planet';
-  var visitorName = params.get('visitor') || 'checkout-visitor';
-  var role = params.get('role') || 'user';
+  var storedUserInfo = {};
+
+  try {
+    storedUserInfo = JSON.parse(sessionStorage.getItem('demoCRM.userInfo')) || {};
+  } catch (error) {
+    storedUserInfo = {};
+  }
+
+  var accountId = params.get('account') || storedUserInfo.account || 'Demo Planet';
+  var visitorName = params.get('visitor') || storedUserInfo.visitor || 'checkout-visitor';
+  var role = params.get('role') || storedUserInfo.role || 'user';
   var visitorId = visitorName + '@' + accountId.replace(/\s/g, '') + '.com';
 
   window.userInfo = {
